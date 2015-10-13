@@ -56,5 +56,26 @@ app.use(function(err, req, res, next) {
   });
 });
 
+//add an express router to render each of the five pages
+app.get('/', function(req, res){
+        res.render('index');
+});
+
+app.get('/about', function(req, res){
+    res.render('about');
+});
+
+app.get('/projects', function(req, res){
+    res.render('projects');
+});
+
+app.get('/services', function(req, res){
+    res.render('services');
+});
+
+app.get('/contact', function(req, res){
+    res.send('contact');
+});
+
 
 module.exports = app;
