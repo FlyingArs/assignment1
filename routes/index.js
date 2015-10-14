@@ -42,7 +42,7 @@ var transporter = nodemailer.createTransport("SMTP", {
 });   
     
 //create the POST method
-router.post('/contact', function(req, res, next){
+router.post('/contact', function(req, res){
     
 //specify the mail option   
 var mailOptions = {
@@ -60,11 +60,11 @@ var mailOptions = {
 
 //transporter sends the email
 transporter.sendMail(mailOptions, function(error, response){
-    if(err){
-        res.render('contact', {title: 'Wrong Input', msg: 'Something happend'});   
+    if(error){
+        res.render('contact', {title: 'Wrong Input. Something Happend.'});   
     }
     else{
-        res.render('contact', {title: 'Correc Input', msg: 'Thank you for your information'});
+        res.render('contact', {title: 'Correct Input. Thank You For Your Information.'});
     }
     
 });
