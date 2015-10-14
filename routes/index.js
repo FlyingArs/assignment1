@@ -1,3 +1,12 @@
+/*
+ * File Name
+ * Author's Name:
+ * Website Name:
+ * File Desciption:
+ */
+
+
+
 var express = require('express');
 var router = express.Router();
 
@@ -29,8 +38,8 @@ router.get('/contact', function(req, res, next){
 	res.render('contact', { title: 'Contact'});
 });
 
-/* POST contact page */
-//using nodemailer to send email when user hit the "submit" button 
+/* POST contact page: 
+using nodemailer to send email when user hit the "submit" button */
 
 //create a mail transporter
 var transporter = nodemailer.createTransport("SMTP", {
