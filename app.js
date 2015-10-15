@@ -33,7 +33,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
 
 //delcare the use of public folder
 //app.use(express.static(__dirname + '/public'));
