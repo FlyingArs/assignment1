@@ -1,20 +1,6 @@
-var express = require('express');
-var router = express.Router();
-
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  //res.send('respond with a resource');
-  
-  //create a list
-  var names = ['you', 'me', 'them'];
-  
-  
-  
-  //render the user page
-  res.render('users', {userlist: names, title: 'David' });
-  
-  
-  
-});
-
-module.exports = router;
+/*
+ * File Name: users.ejs
+ * Author's Name: David Yu 200286902
+ * Website Name:donaldrich.heroku.com
+ * File Desciption: this is a file created by the system. In this case, we don't need to use it at all. 
+ */
